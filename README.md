@@ -1,4 +1,4 @@
-# MDF
+# Maximum Driving Force (MDF)
 
 This code is used to calculate the maximum driving force (MDF) parameter with both experimental data (or user-inputted) and high-throughput DFT data from Materials Project. 
 
