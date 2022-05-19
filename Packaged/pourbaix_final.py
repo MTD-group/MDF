@@ -40,25 +40,21 @@ from pymatgen.analysis.reaction_calculator import Reaction, ReactionError
 from pymatgen.core.composition import Composition
 from pymatgen.core.ion import Ion
 from pymatgen.core.periodic_table import Element
-from pymatgen.entries.compatibility import MU_H2O
 from pymatgen.entries.computed_entries import ComputedEntry
 from pymatgen.util.coord import Simplex
 from pymatgen.util.plotting import pretty_plot
 from pymatgen.util.string import Stringify
 from pymatgen.util.sequence import PBar
 
-__author__ = "Sai Jayaraman"
-__copyright__ = "Copyright 2012, The Materials Project"
-__version__ = "0.4"
-__maintainer__ = "Joseph Montoya"
-__credits__ = "Arunima Singh, Joseph Montoya, Anjli Patel"
-__email__ = "joseph.montoya@tri.global"
-__status__ = "Production"
-__date__ = "Nov 1, 2012"
 
 logger = logging.getLogger(__name__)
 
-PREFAC = 0.0591
+TEMP = 25 + 273
+R = 8.63 * (10**-5)
+RT = TEMP * R
+LN_10 = np.log(10)
+PREFAC = RT*LN_10
+MU_H2O = -2.4577835
 
 
 # TODO: Revise to more closely reflect PDEntry, invoke from energy/composition
